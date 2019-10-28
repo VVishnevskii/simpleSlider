@@ -9,20 +9,53 @@ body {
   justify-content: center;
 }
 
-.photos img {
-  display: none;
-  width: 100%;
+.photo {
+  position: absolute;
+  width: 550px;
   height: 400px;
   object-fit: cover;
   box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 1s;
 }
 
-.photos img:first-child {
-  display: block;
+.showed {
+  opacity: 1;
 }
 
 .buttons {
   display: flex;
   justify-content: center;
   margin-top: 50px;
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 390px;
+}
+
+.button {
+  width: 20px;
+  height: 20px;
+  background: red;
+  border: 10px solid transparent;
+  border-radius: 100%;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  z-index: 1;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+.button:active {
+  transform: translateY(2px);
+}
+
+.prev {
+  margin-right: 20px;
 }
