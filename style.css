@@ -25,34 +25,38 @@ body {
 
 .buttons {
   display: flex;
-  justify-content: center;
-  margin-top: 50px;
+  justify-content: space-between;
+  margin: 10px;
 }
 
 .slider {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 390px;
+  height: 290px;
 }
 
 .button {
-  width: 20px;
-  height: 20px;
-  background: red;
-  border: 10px solid transparent;
-  border-radius: 100%;
-  color: white;
+  width: 120px;
+  background-color: transparent;
+  border: none;
   cursor: pointer;
   outline: none;
   z-index: 1;
+  overflow: hidden;
 }
 
-.button:hover {
+.button img {
+  width: 100%;
+  opacity: 0.1;
+}
+
+.button img:hover {
   transform: scale(1.1);
+  opacity: 0.3;
 }
 
-.button:active {
+.button img:active {
   transform: translateY(2px);
 }
 
